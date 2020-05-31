@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { GlobalContext } from '../App'
+import { GlobalContext } from '../context/GlobalContext'
 import { FaTrashAlt, FaPencilAlt } from 'react-icons/fa'
 
 

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { GlobalContext } from '../App'
+import { GlobalContext } from '../context/GlobalContext'
 
 const Search = () => {
 

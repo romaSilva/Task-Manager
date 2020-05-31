@@ -1,5 +1,5 @@
-import React, { useContext, Fragment } from 'react'
-import { GlobalContext } from '../App'
+import React, { useContext } from 'react'
+import { GlobalContext } from '../context/GlobalContext'
 import Task from './Task'
 
 
@@ -17,9 +17,6 @@ const Tasks = () => {
         return(
             <div className="tasks" />
         ) 
-
-
-
     }
 
 }
