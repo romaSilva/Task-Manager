@@ -10,46 +10,45 @@ const GlobalContextProvider = props => {
     const [ edit, setEdit ] = useState(false)
     const [ selected, setSelected ] = useState(null)
 
-    //methods
     const handleChange = e => {
-    setInput(e.target.value)
+        setInput(e.target.value)
     }
 
     const handleSubmit = e => {
-    e.preventDefault()
-    if(!edit){
-        if(input) {
-        setTasks([...tasks, {input, id: uuid()}])
-        setInput("")
+        e.preventDefault()
+        if(!edit){
+            if(input) {
+            setTasks([...tasks, {input, id: uuid()}])
+            setInput("")
+            }
+        }else {
+            changeTasks(input, selected)
+            setEdit(false)
         }
-    }else {
-        changeTasks(input, selected)
-        setEdit(false)
-    }
     }
 
     const changeTasks = (input, id) => {
-    const newTasks = tasks.map(task => (task.id === id ? { input, id } : task))
-    setTasks(newTasks)
-    setInput("")
+        const newTasks = tasks.map(task => (task.id === id ? { input, id } : task))
+        setTasks(newTasks)
+        setInput("")
     }
 
     const removeTask = id => {
-    setTasks(tasks.filter(task => task.id !== id))
+        setTasks(tasks.filter(task => task.id !== id))
     }
 
     const clearTasks = e => {
-    e.preventDefault()
-    setTasks([])
-    setEdit(false)
-    setInput("")
+        e.preventDefault()
+        setTasks([])
+        setEdit(false)
+        setInput("")
     }
 
     const editTask = id => {
-    setEdit(true)
-    const item = tasks.find(task => task.id === id)
-    setSelected(id)
-    setInput(item.input)
+        setEdit(true)
+        const item = tasks.find(task => task.id === id)
+        setSelected(id)
+        setInput(item.input)
     }
 
     return (
