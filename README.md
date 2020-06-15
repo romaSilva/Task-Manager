@@ -28,7 +28,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Simples _to-do_ _list_ _app_ desenvolvido com o intuito de praticar _state_ _mangement_ com [context API](https://reactjs.org/docs/context.html)
+Simples _to-do_ _list_ _app_ desenvolvido com o intuito de praticar _state_ _management_ com [context API](https://reactjs.org/docs/context.html)
 
 
 ## 🔥 Como usar
